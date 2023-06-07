@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public interface ITaskBuilder
 {
     void SetDescription(string description);
     void SetStatus(string status);
-    Task GetTask();
 }
 
 public class Task
@@ -45,7 +45,7 @@ public class TaskBuilder : ITaskBuilder
 
 public abstract class TaskDecorator : Task
 {
-    private Task task;
+    protected Task task;
 
     public TaskDecorator(Task task)
     {
@@ -99,7 +99,7 @@ class Program
         taskBuilder.SetStatus("In Progress");
 
         // Получение готовой задачи
-        Task task = taskBuilder.GetTask();
+        Task task = ((TaskBuilder)taskBuilder).GetTask();
 
         // Создание декоратора с приоритетом задачи
         PriorityTaskDecorator priorityDecorator = new PriorityTaskDecorator(task, "High");

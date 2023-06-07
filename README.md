@@ -21,3 +21,4 @@
 Класс TaskStatusObserver является конкретным наблюдателем, реализующим интерфейс ITaskObserver и определяющим логику обработки изменений статуса задачи.
 Когда происходят изменения в задаче, метод Notify в наблюдаемом объекте Task вызывает метод Update у всех своих наблюдателей, чтобы они могли обновиться соответственно.
 
+![nLFDQiCm3BxhANpqA7c17aOfWR7J1kqUm8lL8PR5GL8APTkxhtPIjoufRAVvObi_twTFibUYZdNuQ06eK-ITQz0yRfsyhmTgFRBv17DSYmrgZT8mzKgXi_vyNXfHfkxjpYpDFf3FyHjrEeYLjCr7FQ16BXkjyG3V04thHDBjn7r1R4uu4ql2lZBM97th3ZPJ5Q2bhaeZpqJ-Rq9hR08x3R](https://github.com/Ivan-ee/Ivan-ee-Builder_Decorator_Observer_patterns/assets/89241345/bb5754d1-8194-44a0-bf23-4d99cb115ab5)
